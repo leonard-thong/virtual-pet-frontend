@@ -33,6 +33,24 @@ class Home extends React.Component {
 
     render() {
         const { level } = this.state;
+        function handleFunction() {
+          fetch(`https://virtual-pet-c74k.onrender.com/reset/`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "id": 78912 })
+            })
+            .then(response => response.json())
+            .then(response => console.log(JSON.stringify(response)))
+            function sleep(delay) {
+              var start = new Date().getTime();
+              while (new Date().getTime() < start + delay);
+            }
+            sleep(1000);
+            window.location.reload();
+        }
         return <div
             style={{
                 justifyContent: "center",
@@ -46,6 +64,7 @@ class Home extends React.Component {
             <h3>
                 Level {level}
             </h3>
+            <button onClick={() => handleFunction()}>Reset</button>
             </div>
                 <img src={pet} alt="Pet"
                 style={{
