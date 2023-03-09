@@ -1,26 +1,46 @@
 import React from "react";
-import pet from './yangyang.png'
+import pet from './yangyang_bg2.png'
+import './home.css'
 
 const Home = () => {
     return (
         <div
             style={{
-                display: "flex",
                 justifyContent: "center",
                 alignSelf: 'center'
             }}>
-            <h1>
-                Home Page
-            </h1>
+            <PetScreen />
+        </div>
+    )
+};
+
+const InfoBox = () => {
+    return (
+        <div id="infobox">
+            <h2>
+                Khine's Pet
+            </h2>
             <h3>
                 Level 1
             </h3>
+        </div>
+    )
+};
+
+const PetScreen = () => {
+    return (
+        <div id="petscreen"
+            >
+            <InfoBox />
             <img src={pet} alt="Pet"
-             style={{ 
+             style={{
+                width: "100%", 
+                height: "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignSelf: 'center'
             }} />;
+
         </div>
     )
 };

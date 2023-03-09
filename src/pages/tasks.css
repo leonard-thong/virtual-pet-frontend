@@ -1,0 +1,16 @@
+#taskBox {
+    align-content: start;
+    background-color: #7E5CDB;
+    padding: 15px;
+    display: flex;
+}
+
+#taskName {
+    align-self: left;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+#taskButton {
+    align-self: right;
+}

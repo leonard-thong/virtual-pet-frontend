@@ -1,0 +1,14 @@
+#infobox {
+    z-index: 5;
+    position: absolute;
+    background-color: #7E5CDB;
+    border-width: 5px;
+    border-color: #000;
+    padding: 20px;
+    transform: translate(25px, 25px);
+}
+
+#petscreen {
+    z-index: 1;
+    position: relative;
+}
