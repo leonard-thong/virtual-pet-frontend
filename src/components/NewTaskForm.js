@@ -3,30 +3,47 @@ import React from 'react';
 class NewTaskForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {v: ''};
+
+        this.handleFunction = this.handleFunction.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleFunction() {
+        fetch(`https://virtual-pet-c74k.onrender.com/post?task=${this.state.v}`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "id": 78912 })
+        })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)))
+        function sleep(delay) {
+            var start = new Date().getTime();
+            while (new Date().getTime() < start + delay);
+        }
+        sleep(1000);
+        window.location.reload();
     }
-
-    handleSubmit(event) {
-        event.preventDefault();
-    }
-
+    
     render() {
+        const handleChange = (event) => {
+            this.setState({v: event.target.value});
+        }
+
         return (
-            <form onSubmit={this.handleSubmit}>
+            <div>
                 <label for="newTask">
                     Add New Task
                     <input 
                         type="text" 
-                        value={this.state.value}
-                        onChange={this.handleChange}
+                        value={this.state.v}
+                        onChange={handleChange}
                     />
                 </label>
-                <input type="submit" value="Submit"/>
-            </form>
+                <button onClick={this.handleFunction}>Submit</button>
+            </div>
         );
     }
 }
