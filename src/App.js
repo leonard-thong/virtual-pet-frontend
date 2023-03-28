@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Tasks from './pages/tasks';
 
+
 function App() {
   return (
     <Router>
-    <Navbar />
+    <Navbar/>
     <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/tasks' element={<Tasks/>} />

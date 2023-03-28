@@ -1,5 +1,6 @@
 import React from "react";
 import './tasks.css'
+import NewTaskForm from "../components/NewTaskForm";
 
 class Tasks extends React.Component {
     constructor(props) {
@@ -34,12 +35,20 @@ class Tasks extends React.Component {
         const { tasks } = this.state;
         return (
             <div>
-                <h1>
-                    Task Page
-                </h1>
-                {tasks.map((task)=>{
-                    return <Task id={task["id"]} title={task["title"]} />
-                })}
+                <div>
+                    <h2>
+                        Add new task
+                    </h2>
+                    <NewTaskForm />
+                </div>
+                <div>
+                    <h2>
+                        Task list
+                    </h2>
+                    {tasks.map((task)=>{
+                        return <Task id={task["id"]} title={task["title"]} />
+                    })}
+                </div>
             </div>
     )}
 };
