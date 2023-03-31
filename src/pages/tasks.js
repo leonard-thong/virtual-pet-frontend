@@ -37,12 +37,6 @@ class Tasks extends React.Component {
             <div>
                 <div>
                     <h2>
-                        Add new task
-                    </h2>
-                    <NewTaskForm />
-                </div>
-                <div>
-                    <h2>
                         Task list
                     </h2>
                     {tasks.map((task)=>{
