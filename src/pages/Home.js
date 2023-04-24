@@ -118,10 +118,10 @@ class Home extends React.Component {
             </div>
             <div class="customizebar">
               <div>
-                <label
+                <h2
                     style={{fontFamily:"'Concert One', cursive"}}>
                     Customize
-                </label>
+                </h2>
               </div>
               <div style={{
                 }}>

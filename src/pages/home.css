@@ -21,10 +21,15 @@
 }
 
 .customizebar {
+    background-color: #7E5CDB;
+    padding: 20px;
+    height: 100%;
+    width: 10%;
     flex: 1;
 }
 
 .customizebutton{
+    align-self: center;
     width: 128px;
     height: 128px;
 }
