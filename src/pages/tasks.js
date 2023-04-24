@@ -70,7 +70,10 @@ const Task = (props) => {
 
     return (
         <div id="taskBox">
-            <div id={props.id}>
+            <div id={props.id}
+                style={{
+                    paddingRight:"20px"
+                }}>
                 {props.title}
             </div>
             <div id="taskButton">
