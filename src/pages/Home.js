@@ -5,6 +5,8 @@ import pettouch from '../components/ui/yangyang_y1_clicked.png'
 import pet2touch from '../components/ui/yangyang_y2_clicked.png'
 import pet2blue from '../components/ui/yangyang_b2.gif'
 import pet2bluetouch from '../components/ui/yangyang_b2_clicked.png.png'
+import pet1blue from '../components/ui/yangyang_b1.gif'
+import pet1bluetouch from '../components/ui/yangyang_b1_clicked.png.png'
 import './home.css'
 import Tasks from './tasks'
 
@@ -56,8 +58,13 @@ class Home extends React.Component {
         return 'pet2'
       } else {
         if (clicked) {
-
+          if (color === 'blue') {
+            return 'pet1bluetouch';
+          }
           return 'pettouch';
+        }
+        if (color === 'blue') {
+          return 'pet1blue';
         }
         return 'pet';
       }
@@ -78,7 +85,7 @@ class Home extends React.Component {
     render() {
         const { level } = this.state;
         const imagepath = {
-          pet, pet2, pettouch, pet2touch, pet2blue, pet2bluetouch
+          pet, pet2, pettouch, pet2touch, pet2blue, pet2bluetouch, pet1blue, pet1bluetouch
         };
         const image = this.getImageName();
 
@@ -103,10 +110,12 @@ class Home extends React.Component {
         
         return <div class="homebg">
             <div class="infobox">
-                <h2  style={{fontFamily:"'Concert One', cursive"}}>
+                <h2  style={{fontFamily:"'Covered By Your Grace', cursive",
+                    fontSize:"30px"}}>
                   Khine's Pet
                 </h2>
-                <h3 style={{fontFamily:"'Concert One', cursive"}}>
+                <h3 style={{fontFamily:"'Concert One', cursive",
+                  fontSize:"20px"}}>
                   Level {level}
                 </h3>
                 <button onClick={() => handleFunction()}>Reset</button>
@@ -119,7 +128,8 @@ class Home extends React.Component {
             <div class="customizebar">
               <div>
                 <h2
-                    style={{fontFamily:"'Concert One', cursive"}}>
+                    style={{fontFamily:"'Covered By Your Grace', cursive",
+                      fontSize:"30px"}}>
                     Customize
                 </h2>
               </div>

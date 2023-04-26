@@ -1,9 +1,9 @@
 .homebg {
     position: fixed;
     background-color: #1e4f65;
-    justify-content: flex-start;
     display: flex;
     height: 90%;
+    width: 100%;
 }
 
 .infobox {
@@ -11,7 +11,7 @@
     background-color: #7E5CDB;
     padding: 20px;
     height: 100%;
-    width: 10%;
+    width: 20%;
 }
 
 .petscreen {
@@ -24,7 +24,7 @@
     background-color: #7E5CDB;
     padding: 20px;
     height: 100%;
-    width: 10%;
+    width: 20%;
     flex: 1;
 }
 

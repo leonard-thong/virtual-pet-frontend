@@ -20,9 +20,6 @@ return (
 		<NavLink to="/" activeStyle>
 			Home
 		</NavLink>
-		<NavLink to="/tasks" activeStyle>
-			Tasks
-		</NavLink>
 		</NavMenu>
 	</Nav>
 	</>

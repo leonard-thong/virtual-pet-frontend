@@ -36,7 +36,8 @@ class Tasks extends React.Component {
         return (
             <div>
                 <div>
-                    <h2>
+                    <h2 style={{fontFamily:"'Covered By Your Grace', cursive",
+                    fontSize:"30px"}}>
                         Task list
                     </h2>
                     {tasks.map((task)=>{
@@ -72,6 +73,8 @@ const Task = (props) => {
         <div id="taskBox">
             <div id={props.id}
                 style={{
+                    fontFamily:"'Concert One', cursive",
+                    fontSize:"20px",
                     paddingRight:"20px"
                 }}>
                 {props.title}
